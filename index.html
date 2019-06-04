@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		img {
+			position: absolute;
+		}
+		.xwing {
+			display: none
+		}
+		.sid {
+			display: none
+		}
+		.spo {
+			display: none
+		}
+		button {
+			position: absolute;
+		}
+	</style>
+</head>
+<body style="margin: 0">
+	<div style="background-image: url(cosmos.jpg); height: 800px; background-size: 100% 100%">
+		<button class="button at_button" style="">ATTACK!</button>
+		<div style="position: absolute; background-color: white; height: 30px; width: 80px; margin-left: 10%">
+			<h3 class="pointme" style="margin-top: 5px; margin-left: 35px">0</h3>
+		</div>
+		<button class="button2 def_button" style="margin-left: 80%">DEFENCE!</button>
+		<div style="position: absolute; background-color: white; height: 30px; width: 80px; margin-left: 70%">
+			<h3 class="dpointme" style="margin-top: 5px; margin-left: 35px">0</h3>
+		</div>
+		<button class="button3 hep_button_1" style="margin-top: 45%">HELP GUARD!</button>
+		<button class="button4 hep_button_2" style="margin-left: 80%; margin-top: 45%">HELP GUARD!</button>	
+		<img src="deathstar.png" alt="" style="margin-left: 30%; margin-top: 10%">
+		
+
+
+		<img class="xwing" src="asd.png" alt="" style=" width: 10%;  margin-top: 10%; transform: scale(-1, 1)">
+		<img class="xwing" src="asd.png" alt="" style=" width: 10%;  margin-top: 20%; transform: scale(-1, 1) ">
+		<img class="xwing" src="asd.png" alt="" style=" width: 10%;  margin-top: 30%; transform: scale(-1, 1) ">
+		<img class="xwing" src="asd.png" alt="" style=" width: 10%;  margin-top: 40%; transform: scale(-1, 1) ">
+		<img class="xwing" src="asd.png" alt="" style=" width: 10%;  margin-top: 40%; transform: scale(-1, 1); margin-left: 10%; ">
+		<img class="xwing" src="asd.png" alt="" style=" width: 10%;  margin-top: 20%; transform: scale(-1, 1); margin-left: 20%; ">
+		<img class="xwing" src="asd.png" alt="" style=" width: 10%;  margin-top: 30%; transform: scale(-1, 1); margin-left: 20%; ">
+		<img class="xwing" src="asd.png" alt="" style=" width: 10%;  margin-top: 10%; margin-left: 10%; transform: scale(-1, 1) ">
+		<img class="xwing" src="asd.png" alt="" style=" width: 10%;  margin-top: 10%; margin-left: 20%; transform: scale(-1, 1) ">
+		<img class="xwing" src="asd.png" alt="" style=" width: 10%;  margin-top: 20%; margin-left: 10%; transform: scale(-1, 1) ">
+
+		<img class="spo" src="owo.png" alt="" style=" width: 20%;  margin-left: 16% ;margin-top: 30%; transform: scale(-1, 1)">
+
+
+
+
+		<img class="sid" src="sid.png" alt="" style="width: 5%;  margin-top: 2%; margin-left: 70%">
+		<img class="sid" src="sid.png" alt="" style="width: 5%;  margin-top: 10%; margin-left: 70%">
+		<img class="sid" src="sid.png" alt="" style="width: 5%;  margin-top: 20%; margin-left: 70%">
+		<img class="sid" src="sid.png" alt="" style="width: 5%;  margin-top: 30%; margin-left: 70%">
+		<img class="sid" src="sid.png" alt="" style="width: 5%;  margin-top: 40%; margin-left: 70%">
+		<img class="sid" src="sid.png" alt="" style="width: 5%;  margin-top: 40%; margin-left: 80%">
+		<img class="sid" src="sid.png" alt="" style="width: 5%;  margin-top: 2%; margin-left: 80%">
+		<img class="sid" src="sid.png" alt="" style="width: 5%;  margin-top: 10%; margin-left: 80%">
+		<img class="sid" src="sid.png" alt="" style="width: 5%;  margin-top: 20%; margin-left: 80%">
+		<img class="sid" src="sid.png" alt="" style="width: 5%;  margin-top: 30%; margin-left: 80%">
+
+	</div>
+
+	<script>
+	let xwings = document.querySelectorAll(".xwing");
+	let attack_button = document.querySelectorAll(".at_button");
+
+	let sids = document.querySelectorAll(".sid");
+	let defence_button = document.querySelectorAll(".def_button");
+
+	let spos = document.querySelectorAll(".spo");
+	let help_button_1 = document.querySelectorAll(".hep_button_1");
+
+	let index = 0;
+	let point = 0;
+	let dpoint = 0;
+
+	document.querySelector(".at_button").onclick = function(){
+		for(let index = 0; index<10; index = index + 1){
+		xwings[index].style.display = "block"
+	}
+	}
+	document.querySelector(".def_button").onclick = function(){
+		for(let index = 0; index<10; index = index + 1){
+		sids[index].style.display = "block"
+	}
+	}
+	document.querySelector(".hep_button_1").onclick = function(){
+		for(let index = 0; index<10; index = index + 1){
+		spos[index].style.display = "block"
+	}
+	}
+	xwings[0].onclick = function(){
+		point = point + 1
+		document.querySelector(".pointme").innerHTML = point
+		xwings[0].style.display = "none"
+	}    
+	xwings[1].onclick = function(){
+		point = point + 1
+		document.querySelector(".pointme").innerHTML = point
+		xwings[1].style.display = "none"
+	}    
+	xwings[2].onclick = function(){
+		point = point + 1
+		document.querySelector(".pointme").innerHTML = point
+		xwings[2].style.display = "none"
+	}    
+	xwings[3].onclick = function(){
+		point = point + 1
+		document.querySelector(".pointme").innerHTML = point
+		xwings[3].style.display = "none"
+	}    
+	xwings[4].onclick = function(){
+		point = point + 1
+		document.querySelector(".pointme").innerHTML = point
+		xwings[4].style.display = "none"
+	}    
+	xwings[5].onclick = function(){
+		point = point + 1
+		document.querySelector(".pointme").innerHTML = point
+		xwings[5].style.display = "none"
+	}    
+	xwings[6].onclick = function(){
+		point = point + 1
+		document.querySelector(".pointme").innerHTML = point
+		xwings[6].style.display = "none"
+	}    
+	xwings[7].onclick = function(){
+		point = point + 1
+		document.querySelector(".pointme").innerHTML = point
+		xwings[7].style.display = "none"
+	}    
+	xwings[8].onclick = function(){
+		point = point + 1
+		document.querySelector(".pointme").innerHTML = point
+		xwings[8].style.display = "none"
+	}    
+	xwings[9].onclick = function(){
+		point = point + 1
+		document.querySelector(".pointme").innerHTML = point
+		xwings[9].style.display = "none"
+	}    
+	spos[0].onclick = function(){
+		point = point + 1
+		document.querySelector(".pointme").innerHTML = point
+		spos[0].style.display = "none"
+	}   
+	sids[0].onclick = function(){
+		dpoint = dpoint + 1
+		document.querySelector(".dpointme").innerHTML = dpoint
+		sids[0].style.display = "none"
+	}    
+	sids[1].onclick = function(){
+		dpoint = dpoint + 1
+		document.querySelector(".dpointme").innerHTML = dpoint
+		sids[1].style.display = "none"
+	} 
+	sids[2].onclick = function(){
+		dpoint = dpoint + 1
+		document.querySelector(".dpointme").innerHTML = dpoint
+		sids[2].style.display = "none"
+	} 
+	sids[3].onclick = function(){
+		dpoint = dpoint + 1
+		document.querySelector(".dpointme").innerHTML = dpoint
+		sids[3].style.display = "none"
+	} 
+	sids[4].onclick = function(){
+		dpoint = dpoint + 1
+		document.querySelector(".dpointme").innerHTML = dpoint
+		sids[4].style.display = "none"
+	} 
+	sids[5].onclick = function(){
+		dpoint = dpoint + 1
+		document.querySelector(".dpointme").innerHTML = dpoint
+		sids[5].style.display = "none"
+	} 
+	sids[6].onclick = function(){
+		dpoint = dpoint + 1
+		document.querySelector(".dpointme").innerHTML = dpoint
+		sids[6].style.display = "none"
+	} 
+	sids[7].onclick = function(){
+		dpoint = dpoint + 1
+		document.querySelector(".dpointme").innerHTML = dpoint
+		sids[7].style.display = "none"
+	} 
+	sids[8].onclick = function(){
+		dpoint = dpoint + 1
+		document.querySelector(".dpointme").innerHTML = dpoint
+		sids[8].style.display = "none"
+	} 
+	sids[9].onclick = function(){
+		dpoint = dpoint + 1
+		document.querySelector(".dpointme").innerHTML = dpoint
+		sids[9].style.display = "none"
+	} 
+	</script>
+</body>
+</html>
